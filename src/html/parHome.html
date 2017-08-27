@@ -1,0 +1,48 @@
+<div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet">
+    <div class="mdlh-grid">
+        <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet">
+            <div class="addNew-card mdl-shadow--2dp" >
+                <form class="addBox" name="addBox">
+                <div class="mdl-card__supporting-text">
+                    <textarea ng-model="formData.title" name="newItemField"  class="mdl-textfield__input" type="text" rows= "1" id="addNewItem" placeholder="Enter new item here..." required></textarea>
+                    <input type="hidden" name="" value=false ng-model="formData.done">
+                    <button ng-click="addItem()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                        Add
+                    </button>
+                    <!--<span ng-show="addBox.newItemField.$error.required">Please enter something!</span>-->
+                </div>
+              </form>
+
+            </div>
+        </div>
+<!--Main cotent here-->
+        <div class="mdl-grid">
+
+                <div ng-repeat="item in todos | filter:query" class="mdl-card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+                    <div class="mdl-card__title todo-cards mdl-card--expand" ng-bind="item.title" id="done-{{ item.done }}"></div>
+                    <div class="mdl-card__supporting-text" ng-show="edit">
+                        <input type="text" placeholder="Edit Here" ng-model='item.title'>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <!--Item status 'done'-->
+
+                        <input ng-click="taskDone(item)" type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" ng-model='item.done' />
+
+                        <!--Edit item-->
+                        <label ng-if="!item.done" ng-click="editItem(item)" class="mdl-button mdl-js-button mdl-button--icon" >
+                            <i ng-if="edit" class="material-icons">save</i>
+                            <i ng-if="!edit" class="material-icons">edit</i>
+                        </label>
+
+                        <!--Delete Item-->
+                        <label ng-click="deleteItem(item)" class="mdl-button mdl-js-button mdl-button--icon" >
+                            <i class="material-icons">delete</i>
+                        </label>
+
+                    </div>
+                </div>
+
+        </div>
+
+    </div>
+</div>

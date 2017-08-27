@@ -1,0 +1,35 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "todo app client",
+  "main": "index.js",
+  "scripts": {
+    "test": "testRun"
+  },
+  "dependencies": {
+    "angular": "^1.6.5",
+    "body-parser": "~1.5.2",
+    "express": "~4.15.2",
+    "material-design-lite": "^1.0.0-3",
+    "method-override": "~2.1.2",
+    "mongoose": "~4.7.3",
+    "morgan": "~1.2.2",
+    "restangular": "^1.6.1"
+  },
+  "author": "arsem",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-coffee": "^2.3.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-deporder": "^1.1.0",
+    "gulp-htmlclean": "^2.7.15",
+    "gulp-newer": "^1.3.0",
+    "gulp-order": "^1.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8"
+  }
+}

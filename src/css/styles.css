@@ -1,0 +1,45 @@
+body {
+  background-color: #e8e8e8;
+  /*background: url('/resource/images/transparent.jpg') center / cover;*/
+  color: rgba(0,0,0,.87);
+  direction: ltr;
+  font-family: century,'Roboto',arial,sans-serif;
+}
+.addNew-card{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    /*background-color: #ffffffb3;*/
+}
+
+.addNew-card > .mdl-button{
+    float: right;
+    padding: 5px;
+}
+#done-true {
+  text-decoration: line-through;
+  color: grey;
+ }
+ .demo-card-square{
+
+ }
+ .mdl-layout-title{
+     margin-right: 5%;
+ }
+
+
+ .mdl-navigation{
+     padding-left, padding-right: 10px;
+
+ }
+ .portfolio-max-width {
+   max-width: 900px;
+   margin: auto;
+ }
+ img.article-image {
+   width: 100%;
+   height: 250px;
+ }
+ .todo-cards{
+   font-size: auto;
+ }
