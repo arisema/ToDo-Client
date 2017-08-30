@@ -5,7 +5,7 @@
                <form class="addBox" name="addBox">
                   <div class="mdl-card__supporting-text">
                       <textarea ng-model="newProject.title" name="newItemField"  class="mdl-textfield__input" type="text" rows= "1" id="addNewItem" placeholder="New project title here..." required></textarea>
-                      <button ng-click="addProject()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                      <button ng-click="projectAdd()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
                           Add
                       </button>
                       <!--<span ng-show="addBox.newItemField.$error.required">Please enter something!</span>-->
@@ -25,11 +25,11 @@
                               <tbody>
                                   <tr ng-if="task.projectId == project.id" ng-repeat='task in tasks | filter: query'>
                                       <td>
-                                          <input ng-click="taskDone(task)" type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" ng-model='task.done' />
+                                          <input ng-click="taskDone(task)" type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" ng-model='tasks.done' checked=true/>
                                       </td>
 
                                       <td>
-                                          <p class="done-{{ task.done }}" ng-bind='task.taskTitle'></p>
+                                          <p id="done-{{ task.done }}" ng-bind='task.taskTitle'></p>
                                           <div ng-show="edit" ><input type="text" ng-model="task.taskTitle"></div>
                                       </td>
                                       <td>

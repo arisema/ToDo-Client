@@ -20,7 +20,7 @@ angular.module('toDo')
 
       $scope.taskAdd = function($project) {
         $scope.newTask.projectId = $project.id;
-        $scope.newTask.done = true;
+        $scope.newTask.done = false;
         Task.post($scope.newTask).then(function(){
             $scope.tasks = Task.getList().$object;
             $scope.newTask = {};
